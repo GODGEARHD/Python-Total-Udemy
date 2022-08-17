@@ -26,8 +26,52 @@ import random
 
 
 def main():
-    print("######################## Juego \"Adivina el Número\" ########################")
+
+    i = None
     aleatorio = rdm()
+    acertado = False
+
+    print("\n######################## Juego \"Adivina el Número\" ########################")
+    print("\nEl juego consiste en encontrar el número que el programa elige de manera aleatoria antes de realizar "
+          "8 intentos.\n"
+          "Si lo consigues, GANAS; y si no lo consigues, PIERDES. Fácil, ¿verdad?\n"
+          "Además, cada vez que le digas al programa un número que no sea el correcto,\n"
+          "te dirá si el número que le has dicho es MAYOR o MENOR al número correcto. ¡Buena suerte!\n\n")
+
+    for i in range(8):
+        print(f'Intento Nº{i + 1}')
+        try:
+            numero = int(input("¿Cuál es el número oculto?\n"))
+            if numero == aleatorio:
+                acertado = True
+                break
+            elif numero > 100:
+                print(f'Tu número {numero} es MAYOR que 100, no puedes pasar de ese límite (-1 intento :D)')
+                continue
+            elif numero > aleatorio:
+                print(f'Tu número {numero} es MAYOR al número oculto, prueba con uno más bajo (-1 intento :D)')
+                continue
+            elif numero < 1:
+                print(f'Tu número {numero} es MENOR que 1, no puedes pasar de ese límite (-1 intento :D)')
+                continue
+            else:
+                print(f'Tu número {numero} es MENOR al número oculto, prueba con uno más alto (-1 intento :D)')
+                continue
+        except ValueError:
+            if i == 7:
+                print("Debes introducir un NÚMERO, no una letra.\n Ah! Y que sepas que te has quedado sin intentos :)")
+            else:
+                print("Debes introducir un NÚMERO, no una letra.\n Ah! Y que sepas que acabas de gastar un intento, "
+                      "te quedan: " + str(8 - (i + 1)) + " intentos ;P")
+                continue
+
+    if acertado:
+        print(f'¡Enhorabuena! Has acertado el número oculto, y te ha llevado {i + 1} intento(s)\n')
+    else:
+        print(f'¡Más suerte la próxima! No has conseguido acertar el número oculto, inicia el juego de nuevo y'
+              f' vuelve a intentarlo')
+
+    print("######################## FIN DEL JUEGO ########################")
 
 
 def rdm():
