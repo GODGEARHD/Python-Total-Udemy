@@ -10,4 +10,10 @@ pos3 = list[2]
 
 print(type(pos1))
 
-counter = palabra2.count(pos1)
+counter1 = palabra2.count(pos1)
+counter2 = palabra2.count(pos2)
+counter3 = palabra2.count(pos3)
+
+print(counter1)
+print(counter2)
+print(counter3)
