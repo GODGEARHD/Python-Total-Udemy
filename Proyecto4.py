@@ -27,11 +27,11 @@ import random
 
 def main():
     print("######################## Juego \"Adivina el Número\" ########################")
-    rdm()
+    aleatorio = rdm()
 
 
 def rdm():
-    print(random.randint(1, 100))
+    return random.randint(1, 100)
 
 
 if __name__ == "__main__":
