@@ -22,10 +22,16 @@ ademas, si el programa entra en el 4º flujo (numero correcto, el usuario gana e
 se le debe notificar al jugador cuantos intentos le ha llevado
 """
 
+import random
+
 
 def main():
     print("######################## Juego \"Adivina el Número\" ########################")
-    input()
+    rdm()
+
+
+def rdm():
+    print(random.randint(1, 100))
 
 
 if __name__ == "__main__":
