@@ -27,7 +27,6 @@ from random import randint
 
 def main():
 
-    i = None
     aleatorio = rdm()
     acertado = False
 
@@ -43,6 +42,7 @@ def main():
             numero = int(input("¿Cuál es el número oculto?\n"))
             if numero == aleatorio:
                 acertado = True
+                print(f'¡Enhorabuena! Has acertado el número oculto, y te ha llevado {i + 1} intento(s)\n')
                 break
             elif numero > 100:
                 print(f'Tu número {numero} es MAYOR que 100, no puedes pasar de ese límite (-1 intento :D)\n')
@@ -65,9 +65,7 @@ def main():
                       "te quedan: " + str(8 - (i + 1)) + " intentos ;P\n")
                 continue
 
-    if acertado:
-        print(f'¡Enhorabuena! Has acertado el número oculto, y te ha llevado {i + 1} intento(s)\n')
-    else:
+    if not acertado:
         print(f'¡Más suerte la próxima! No has conseguido acertar el número oculto (que era {aleatorio}), inicia el '
               f'juego de nuevo y vuelve a intentarlo\n')
 
