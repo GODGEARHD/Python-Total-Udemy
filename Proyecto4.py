@@ -32,9 +32,8 @@ def main():
     acertado = False
 
     print("\n######################## Juego \"Adivina el Número\" ########################")
-    print("\nEl juego consiste en encontrar el número que el programa elige de manera aleatoria antes de realizar "
-          "8 intentos.\n"
-          "Si lo consigues, GANAS; y si no lo consigues, PIERDES. Fácil, ¿verdad?\n"
+    print("\nEl juego consiste en encontrar el número entre 1 y 100 que el programa elige de manera aleatoria "
+          "antes de realizar 8 intentos.\nSi lo consigues, GANAS; y si no lo consigues, PIERDES. Fácil, ¿verdad?\n"
           "Además, cada vez que le digas al programa un número que no sea el correcto,\n"
           "te dirá si el número que le has dicho es MAYOR o MENOR al número correcto. ¡Buena suerte!\n\n")
 
