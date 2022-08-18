@@ -46,32 +46,33 @@ def main():
                 acertado = True
                 break
             elif numero > 100:
-                print(f'Tu número {numero} es MAYOR que 100, no puedes pasar de ese límite (-1 intento :D)')
+                print(f'Tu número {numero} es MAYOR que 100, no puedes pasar de ese límite (-1 intento :D)\n')
                 continue
             elif numero > aleatorio:
-                print(f'Tu número {numero} es MAYOR al número oculto, prueba con uno más bajo (-1 intento :D)')
+                print(f'Tu número {numero} es MAYOR al número oculto, prueba con uno más bajo (-1 intento :D)\n')
                 continue
             elif numero < 1:
-                print(f'Tu número {numero} es MENOR que 1, no puedes pasar de ese límite (-1 intento :D)')
+                print(f'Tu número {numero} es MENOR que 1, no puedes pasar de ese límite (-1 intento :D)\n')
                 continue
             else:
-                print(f'Tu número {numero} es MENOR al número oculto, prueba con uno más alto (-1 intento :D)')
+                print(f'Tu número {numero} es MENOR al número oculto, prueba con uno más alto (-1 intento :D)\n')
                 continue
         except ValueError:
             if i == 7:
-                print("Debes introducir un NÚMERO, no una letra.\n Ah! Y que sepas que te has quedado sin intentos :)")
+                print("Debes introducir un NÚMERO, no una letra.\n Ah! Y que sepas que te "
+                      "has quedado sin intentos :)\n")
             else:
                 print("Debes introducir un NÚMERO, no una letra.\n Ah! Y que sepas que acabas de gastar un intento, "
-                      "te quedan: " + str(8 - (i + 1)) + " intentos ;P")
+                      "te quedan: " + str(8 - (i + 1)) + " intentos ;P\n")
                 continue
 
     if acertado:
         print(f'¡Enhorabuena! Has acertado el número oculto, y te ha llevado {i + 1} intento(s)\n')
     else:
-        print(f'¡Más suerte la próxima! No has conseguido acertar el número oculto, inicia el juego de nuevo y'
-              f' vuelve a intentarlo')
+        print(f'¡Más suerte la próxima! No has conseguido acertar el número oculto (que era {aleatorio}), inicia el '
+              f'juego de nuevo y vuelve a intentarlo\n')
 
-    print("######################## FIN DEL JUEGO ########################")
+    print("\n######################## FIN DEL JUEGO ########################\n")
 
 
 def rdm():
