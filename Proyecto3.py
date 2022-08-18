@@ -1,4 +1,4 @@
- # Input from the user (text & letters)
+# Input from the user (text & letters)
 question_1 = input("Introduce un texto: ").lower()
 question_2 = input("Introduce 3 letras: ".lower())
 

@@ -1,4 +1,4 @@
- nombre = input("¿Cuál es tu nombre?\n")
+nombre = input("¿Cuál es tu nombre?\n")
 
 ventas = input("¿Cuántas ventas has realizado este mes?\n")
 
